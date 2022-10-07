@@ -11,24 +11,23 @@ public class FileDataSourceHolder implements DataSourceHolder {
     private static String path;
     private static DataSource source;
     public FileDataSourceHolder(String path) {
-        if (source == null) {
-            setPath(path);
-            refresh();
-        }
-    };
+       if (source == null) {
+           setPath(path);
+           refresh();
+       }
+    }
 
     @Override
     public DataSource getDataSource() {
         return source;
     }
 
-    public void setPath(String path) {
-        Objects.requireNonNull(path);
-        this.path = path;
+    public static void setPath(String newPath) {
+        Objects.requireNonNull(newPath);
+        path = newPath;
     }
 
-    @Override
-    public void refresh() {
+    public static void refresh() {
         try {
             Properties props = new Properties();
             FileInputStream fis = new FileInputStream(path);
