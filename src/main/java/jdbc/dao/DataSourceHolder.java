@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.dao;
 
 import javax.sql.DataSource;
 

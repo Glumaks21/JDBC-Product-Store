@@ -1,7 +1,5 @@
 package jdbc.dao;
 
-import jdbc.DataSourceHolder;
-import jdbc.FileDataSourceHolder;
 import jdbc.entity.Product;
 
 import javax.sql.DataSource;
